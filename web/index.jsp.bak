@@ -1,0 +1,64 @@
+<%-- Created by IntelliJ IDEA. --%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<html>
+  <head>
+    <title>报修系统</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="${pageContext.request.contextPath}/js/jquery/jquery-3.3.1.min.js"></script>
+    <link href="${pageContext.request.contextPath}/css/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <script src="${pageContext.request.contextPath}/js/bootstrap/bootstrap.min.js"></script>
+    <script src="${pageContext.request.contextPath}/js/index.js"></script>
+  </head>
+
+  <body>
+  <h2 class="text-center">报修系统表</h2>
+    <div class="container center-block">
+      <form action="#" method="post" id="sendInfo">
+        <table class="table table-hover">
+          <tr>
+            <td class="badge-pill bg-primary">您的姓名</td>
+            <td class="badge-pill badge-info">宿舍楼</td>
+            <td class="badge-pill badge-secondary" >寝室号</td>
+            <td class="badge-pill badge-danger">故障信息</td>
+          </tr>
+          <tr>
+            <td><input type="text" placeholder="请填写姓名" id="name"></td>
+            <td><input type="text" placeholder="请填写宿舍楼" id="floor"></td>
+            <td><input type="text" placeholder="请填写寝室号" id="room"></td>
+            <td><textarea name="info" id="info" cols="30" rows="10" placeholder="请填写故障信息"></textarea></td>
+          </tr>
+          <tr>
+            <td colspan="4"><button type="button" class="btn-primary btn btn-block" data-toggle="modal" data-target="#myModal" id="button">提交信息</button></td>
+          </tr>
+        </table>
+      </form>
+    </div>
+
+  <!-- 模态框 -->
+  <div class="modal fade" id="myModal" data-backdrop="static">
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+        <!-- 模态框头部 -->
+        <div class="modal-header">
+          <h4 class="modal-title">确认信息</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+
+        <!-- 模态框主体 -->
+        <div class="modal-body">
+          <div>
+            <label class="col-form-label">名称:</label>
+            <input type="text" value="sjdl;kf" readonly>
+          </div>
+        </div>
+        <!-- 模态框底部 -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+          <button type="button" class="btn btn-secondary">提交</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  </body>
+</html>
